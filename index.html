@@ -3,6 +3,7 @@
   <head>
     <title>Triangle Tracker</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" integrity="sha384-PmY9l28YgO4JwMKbTvgaS7XNZJ30MK9FAZjjzXtlqyZCqBY6X6bXIkM++IkyinN+" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script
     src="https://code.jquery.com/jquery-3.3.1.js"
@@ -37,16 +38,22 @@
             <button class="button-next"type="button" name="next">Next</button>
           </div>
           <div class="form-group" id="toppings">
-            <label>Choose Your Toppings (All toppings .50 cents)</label><br>
+            <label>Choose Your Toppings <br> <span id="topping-comment">(All toppings .50 cents)</span></label><br>
             <input type="checkbox" name="topping" value="pepperoni">Pepperoni<br>
             <input type="checkbox" name="topping" value="sausage">Italian Sausage<br>
             <input type="checkbox" name="topping" value="anchovies">Anchovies<br>
           </div>
-          <button type="submit" name="button">Place Order</button>
+          <button id="submit" type="submit" name="button">Place Order</button>
         </form>
         <div class="output">
-          <h2>Peparing Your Order Now</h2>
+          <h2 class='output-head'>Peparing Your Order Now</h2>
+          <ul class="list-group">
+
+          </ul>
         </div>
+      </div>
+      <div class="col-xs-5">
+        <img src="img/pizza-cowboy.gif" alt="pizza icon">
       </div>
     </div>
   </body>

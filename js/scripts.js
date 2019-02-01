@@ -54,9 +54,14 @@ $(document).ready(function () {
     pizza.calcTotalPrice();
     $('.pizza-form').hide();
     $('.output').show();
-    $('.output').append('<p>' + pizza.size + '</p>');
-    $('.output').append('<p>' + pizza.toppings + '</p>');
-    $('.output').append('<p>' + '$' + pizza.totalPrice + '</p>');
+    // debugger;
+    $('.list-group').append('<li class="list-group-item">' + pizza.size + '</li>');
+    $('.list-group').append('<ul class="toppings-list list-group-item"></ul>');
+    $('.toppings-list').append('<h4>Toppings</h4>');
+    pizza.toppings.forEach(function (topping){
+      $('.toppings-list').append('<li class="toppings-list-items">' + topping + '</li>');
+    });
+    $('.list-group').append('<li class="list-group-item">' + '$' + pizza.totalPrice + '</li>');
 
     console.log(pizza);
   });
