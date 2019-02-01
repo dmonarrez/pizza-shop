@@ -16,11 +16,12 @@ Pizza.prototype.calcToppingPrice = function (){
 };
 //calculating price based on size choice
 Pizza.prototype.calcSizePrice = function (){
+  debugger;
   if(this.size === 'Small 10"') {
     this.sizePrice = 10.99;
   } else if (this.size === 'Medium 12"') {
     this.sizePrice = 12.99;
-  } else {
+  } else if (this.size === 'Large 14"'){
     this.SizePrice = 14.99;
   }
 };
@@ -36,6 +37,7 @@ $(document).ready(function () {
   $('.button-next').click(function (){
     $('.size-form').hide();
     $('#toppings').show();
+    $('#submit').show();
   });
   //pizza form submission function
   $('.pizza-form').submit(function (event) {
@@ -55,6 +57,8 @@ $(document).ready(function () {
     $('.pizza-form').hide();
     $('.output').show();
     // debugger;
+
+    //display fianl order
     $('.list-group').append('<li class="list-group-item">' + pizza.size + '</li>');
     $('.list-group').append('<ul class="toppings-list list-group-item"></ul>');
     $('.toppings-list').append('<h4>Toppings</h4>');
