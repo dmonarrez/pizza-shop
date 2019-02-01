@@ -16,13 +16,25 @@
         <h1>Epi-Pizza</h1>
         <p>Place your order below!</p>
       </div>
+
+      <!-- <div class="landing">
+        <h1>START YOUR ORDER</h1>
+
+        <button class="btn btn-primary btn-circle btn-xl landing-buttons" type="button" name="carry-out"></button>
+        <button class="btn btn-success btn-circle btn-xl landing-buttons" type="button" name="button"></button>
+      </div> -->
+
+
       <form class="pizza-form">
         <label>Choose Your Size</label>
-        <select class="form-control" id="size">
-          <option>Small 10"</option>
-          <option>Medium 12"</option>
-          <option>Large 14"</option>
-        </select>
+        <div class="size-form">
+          <select class="form-control" id="size">
+            <option>Small 10"</option>
+            <option>Medium 12"</option>
+            <option>Large 14"</option>
+          </select>
+          <button type="button" name="next">Next</button>
+        </div>
         <div class="form-group" id="toppings">
           <label>Choose Your Toppings (All toppings .50 cents)</label><br>
           <input type="checkbox" name="topping" value="pepperoni">Pepperoni<br>
