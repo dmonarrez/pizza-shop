@@ -17,7 +17,19 @@
         <p>Place your order below!</p>
       </div>
       <form class="pizza-form">
-
+        <label>Choose Your Size</label>
+        <select class="form-control" id="size">
+          <option>Small 10"</option>
+          <option>Medium 12"</option>
+          <option>Large 14"</option>
+        </select>
+        <div class="form-group" id="toppings">
+          <label>Choose Your Toppings</label><br>
+          <input type="checkbox" name="topping" value="pepperoni">Pepperoni<br>
+          <input type="checkbox" name="topping" value="sausage">Italian Sausage<br>
+          <input type="checkbox" name="topping" value="anchovies">Anchovies<br>
+        </div>
+       <button type="submit" name="button">Place Order</button>
       </form>
     </div>
   </body>
