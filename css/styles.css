@@ -16,8 +16,8 @@ label {
   font-size: 40px;
 }
 
-li {
-
+button {
+  margin-top: 20px;
 }
 
 .topping-comment {
@@ -47,6 +47,10 @@ li {
 
 #toppings {
   display: none;
+}
+
+#meat, #non-meat {
+  font-size: 20px;
 }
 
 .output {

@@ -22,11 +22,12 @@ Pizza.prototype.calcSizePrice = function (){
   } else if (this.size === 'Medium 12"') {
     this.sizePrice = 12.99;
   } else if (this.size === 'Large 14"'){
-    this.SizePrice = 14.99;
+    this.sizePrice = 14.99;
   }
 };
 
 Pizza.prototype.calcTotalPrice = function (){
+  debugger;
   this.totalPrice = this.sizePrice + this.toppingsPrice;
 };
 
