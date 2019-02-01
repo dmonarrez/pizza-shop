@@ -32,6 +32,7 @@ Pizza.prototype.calcTotalPrice = function (){
 var pizza = new Pizza();
 
 $(document).ready(function () {
+  //pizza form submission function
   $('.pizza-form').submit(function (event) {
     event.preventDefault();
     //get size input and update pizza object
@@ -46,7 +47,12 @@ $(document).ready(function () {
     pizza.calcToppingPrice();
     //calculate and return total price of pizza
     pizza.calcTotalPrice();
-    
     console.log(pizza);
   });
+  //button click functions
+  $('.button-next').click(function (){
+    $('.size-form').hide();
+    $('#toppings').show();
+  });
+
 });
