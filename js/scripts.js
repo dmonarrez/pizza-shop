@@ -1,5 +1,5 @@
 //pizza constructor
-function Pizza () {
+function Pizza (){
   this.size;
   this.sizePrice= 0;
   this.toppings = [];
@@ -7,14 +7,14 @@ function Pizza () {
   this.totalPrice = 0;
 };
 //calculating pice of toppings added
-Pizza.prototype.calcToppingPrice = function () {
+Pizza.prototype.calcToppingPrice = function (){
   let total = 0;
   this.toppings.forEach(function (topping) {
     total += .50;
   });
   this.toppingsPrice = total;
 };
-
+//calculating price based on size choice
 Pizza.prototype.calcSizePrice = function (){
   if(this.size === 'Small 10"') {
     this.sizePrice = 10.99;
@@ -23,7 +23,11 @@ Pizza.prototype.calcSizePrice = function (){
   } else {
     this.SizePrice = 14.99;
   }
-}
+};
+
+Pizza.prototype.calcTotalPrice = function (){
+  this.totalPrice = this.sizePrice + this.toppingsPrice;
+};
 
 var pizza = new Pizza();
 
@@ -40,7 +44,9 @@ $(document).ready(function () {
       pizza.toppings.push(toppings);
     });
     pizza.calcToppingPrice();
-
+    //calculate and return total price of pizza
+    pizza.calcTotalPrice();
+    
     console.log(pizza);
   });
 });
