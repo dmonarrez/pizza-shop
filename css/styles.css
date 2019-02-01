@@ -1,3 +1,10 @@
+body, html {
+  background-image: url('../img/triangles2.jpg');
+  display: block;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .header {
   text-align: center;
 }
@@ -26,4 +33,9 @@
 } */
 #toppings {
   display: none;
+}
+
+.output {
+  display: none;
+  text-align: center;
 }

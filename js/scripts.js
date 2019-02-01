@@ -32,6 +32,11 @@ Pizza.prototype.calcTotalPrice = function (){
 var pizza = new Pizza();
 
 $(document).ready(function () {
+  //button click functions
+  $('.button-next').click(function (){
+    $('.size-form').hide();
+    $('#toppings').show();
+  });
   //pizza form submission function
   $('.pizza-form').submit(function (event) {
     event.preventDefault();
@@ -47,12 +52,15 @@ $(document).ready(function () {
     pizza.calcToppingPrice();
     //calculate and return total price of pizza
     pizza.calcTotalPrice();
+    $('.pizza-form').hide();
+    $('.output').show();
+    $('.output').append('<p>' + pizza.size + '</p>');
+    $('.output').append('<p>' + pizza.toppings + '</p>');
+    $('.output').append('<p>' + '$' + pizza.totalPrice + '</p>');
+
     console.log(pizza);
   });
-  //button click functions
-  $('.button-next').click(function (){
-    $('.size-form').hide();
-    $('#toppings').show();
-  });
+
+
 
 });
