@@ -54,6 +54,9 @@ $(document).ready(function () {
     });
     pizza.calcToppingPrice();
     //calculate and return total price of pizza
+    debugger;
+    let parsedTotal = parseFloat(pizza.totalPrice).toFixed(2);
+    pizza.totalPrice = parsedTotal;
     pizza.calcTotalPrice();
     $('.pizza-form').hide();
     $('.output').show();

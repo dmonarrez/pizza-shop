@@ -1,5 +1,5 @@
 body, html {
-  background-image: url('../img/triangles2.jpg');
+  background-image: url('../img/pizza-nebula.jpg');
   display: block;
   background-size: cover;
   background-repeat: no-repeat;
@@ -25,14 +25,16 @@ button {
 }
 
 .header {
-  background-color: #F1E3B4;
+  /* background-color: #F1E3B4; */
   text-align: center;
-  padding-bottom: 50px;
+  background-color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 50px;
+  border-radius: 20px;
 
 }
 
 .col-xs-7 {
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.6);
   border-radius: 20px;
   height: 504px;
 }
@@ -50,6 +52,10 @@ button {
 }
 
 #meat, #non-meat {
+  font-size: 20px;
+}
+
+#title-comment {
   font-size: 20px;
 }
 
